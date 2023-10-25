@@ -1,0 +1,24 @@
+[type="email"] {
+  direction: rtl; }
+
+.login-form {
+  margin: 0 auto;
+  max-width: 35rem;
+  padding: 2rem; }
+  .login-form label {
+    cursor: text; }
+  .login-form input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1.3rem; }
+  .login-form .wrapper i {
+    font-size: 2.5rem;
+    height: 2.5rem; }
+  .login-form #email-input:active {
+    border: none !important;
+    outline: none !important; }
+
+@media (max-width: 340px) {
+  .login-form input {
+    font-size: 1.1rem; } }

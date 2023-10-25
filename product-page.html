@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>صفحه محصول</title>
+
+    <link
+      rel="stylesheet"
+      href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/xzoom.min.css" />
+    <link rel="stylesheet" href="css/product-page.css" />
+
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/jquery-3.3.1.min.js" defer></script>
+    <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js" defer></script>
+    <script src="js/persia-number.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/product-page.js" defer></script>
+  </head>
+  <body class="">
+    <header>
+      <div class="container-fluid px-3">
+        <div class="desktop-header d-none d-md-block py-4">
+          <div
+            class="top-header d-flex justify-content-between align-items-center">
+            <div class="d-flex flex-grow-1">
+              <a href="index.html">
+                <h1 class="title">AMATIS</h1>
+              </a>
+              <div
+                class="search-box d-flex align-items-center gap-3 flex-grow-1 mx-4 py-3 px-4 rounded-4">
+                <i class="icofont-search"></i>
+                <input
+                  type="text"
+                  name="search"
+                  id="search-input"
+                  class="w-100 bg-transparent"
+                  placeholder="جستجو..." />
+              </div>
+            </div>
+            <div>
+              <a href=""><i class="icofont-moon mx-3"></i></a>
+              <a href="#"><i class="icofont-shopping-cart mx-3"></i></a>
+              <a href="#"><i class="icofont-ui-user mx-3"></i></a>
+            </div>
+          </div>
+          <nav
+            class="bottom-header d-none d-md-flex justify-content-between align-items-center my-4">
+            <div class="d-flex align-items-center">
+              <div class="products-category d-flex gap-1 align-items-center">
+                <i class="icofont-navigation-menu"></i>
+                <p class="products-category__title m-0">دسته یندی کالاها</p>
+                <div class="products-category__container"></div>
+              </div>
+              <ul class="d-flex gap-4 gap-lg-5">
+                <li><a href="#">پرفروش ترین ها</a></li>
+                <li><a href="#">تخفیفات و پیشنهادات</a></li>
+                <li><a href="#">شکفت انگیز</a></li>
+              </ul>
+            </div>
+            <a href="#" class="d-flex gap-1">
+              <i class="icofont-location-pin"></i>
+              <p class="user-location-title m-0">لطفا شهر خود را انتخاب کنید</p>
+            </a>
+          </nav>
+        </div>
+
+        <div class="mobile-header d-md-none">
+          <div
+            class="mobile-header__top d-flex justify-content-between align-items-center py-3">
+            <i
+              class="icofont-navigation-menu side-menu-btn"
+              id="side-menu-btn"></i>
+            <a href="index.html">
+              <h1 class="title">AMATIS</h1>
+            </a>
+            <a href="#"><i class="icofont-location-pin"></i></a>
+          </div>
+          <div
+            class="d-flex justify-content-between align-items-center gap-5 py-3">
+            <div
+              class="search-box d-flex align-items-center gap-3 flex-grow-1 py-3 px-4 rounded-4">
+              <i class="icofont-search"></i>
+              <input
+                type="text"
+                name="search"
+                id="search-input"
+                class="w-100 bg-transparent"
+                placeholder="جستجو..." />
+            </div>
+            <a href="#"><i class="icofont-ui-user"></i></a>
+            <a href="#"><i class="icofont-shopping-cart"></i></a>
+          </div>
+          <nav class="side-bar" id="side-bar">
+            <a href="index.html" class="d-block text-center my-4">
+              <h1 class="title">AMATIS</h1>
+            </a>
+            <ul class="side-menu my-5 p-0">
+              <li class="side-menu__item">
+                <div class="side-menu__link">
+                  کالای دیجیتال
+                  <i class="icofont-simple-down dropdown"></i>
+                </div>
+                <ul class="sub-menu">
+                  <li><a href="#">موبایل</a></li>
+                  <li><a href="#">لپ تاپ</a></li>
+                  <li><a href="#">کامپیوتر</a></li>
+                  <li><a href="#">اسپیکر</a></li>
+                  <li><a href="#">هدفون و هدست</a></li>
+                  <li><a href="#">ساعت هوشمند</a></li>
+                  <li><a href="#">هارد و فلش</a></li>
+                  <li><a href="#">دوربین</a></li>
+                </ul>
+              </li>
+              <li class="side-menu__item">
+                <div class="side-menu__link">
+                  بهداشت و سلامت
+                  <i class="icofont-simple-down dropdown"></i>
+                </div>
+                <ul class="sub-menu">
+                  <li><a href="#">لوازم آرایشی</a></li>
+                  <li><a href="#">عطر و ادکلن</a></li>
+                  <li><a href="#">مراقبت پوست</a></li>
+                  <li><a href="#">لوازم بهداشتی</a></li>
+                  <li><a href="#">مو</a></li>
+                </ul>
+              </li>
+              <li class="side-menu__item">
+                <a href="#" class="side-menu__link">ابزار و اداری</a>
+              </li>
+              <li class="side-menu__item">
+                <div class="side-menu__link">
+                  مد و پوشاک
+                  <i class="icofont-simple-down dropdown"></i>
+                </div>
+                <ul class="sub-menu">
+                  <li><a href="#">لباس</a></li>
+                  <li><a href="#">کفش</a></li>
+                  <li><a href="#">کیف</a></li>
+                  <li><a href="#">ورزشی</a></li>
+                  <li><a href="#">اکسسوری</a></li>
+                  <li><a href="#">کوهنوردی</a></li>
+                  <li><a href="#">زیورآلات</a></li>
+                  <li><a href="#">بچه گانه</a></li>
+                </ul>
+              </li>
+              <li class="side-menu__item">
+                <div class="side-menu__link">
+                  خانه و آشپزخانه
+                  <i class="icofont-simple-down dropdown"></i>
+                </div>
+                <ul class="sub-menu">
+                  <li><a href="#">تلویزیون</a></li>
+                  <li><a href="#">یخجال و فریزر</a></li>
+                  <li><a href="#">کمد دیواری</a></li>
+                  <li><a href="#">فرش</a></li>
+                  <li><a href="#">نور و روشنایی</a></li>
+                  <li><a href="#">مواد شوینده</a></li>
+                  <li><a href="#">ظرفشویی</a></li>
+                  <li><a href="#">سرویس خواب</a></li>
+                  <li><a href="#">گل دان</a></li>
+                  <li><a href="#">پذیرایی</a></li>
+                </ul>
+              </li>
+              <li class="side-menu__item">
+                <a href="#" class="side-menu__link">ورزش و سفر</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container-fluid">
+        <div class="row">
+          <section class="product-gallery col-md-6 col-lg-4"></section>
+          <section class="product-info col-md-6 col-lg-8">
+            <div class="product-title row">
+              <h2 class="product-title__name text-dark col-12">
+                گوشی موبایل اپل مدل iPhone 13 Pro Max A2644 دو سیم‌ کارت ظرفیت
+                128 گیگابایت و رم 6 گیگابایت - اکتیو
+              </h2>
+              <h2 class="product-title__english-name h5 text-muted col-12">
+                Apple iPhone 13 Pro Max A2644 Dual SIM 128GB And 6GB RAM Active
+                Mobile Phone-activate
+              </h2>
+            </div>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="product-ratings">
+                  <li class="d-inline-block h5">
+                    <i class="bi bi-star-fill text-orange h3"></i>
+                    <span>4.5</span>
+                    <span class="text-muted">(305)</span>
+                  </li>
+                  <li class="d-inline-block h6 mx-4">
+                    <a href="#users-comments">
+                      <span class="text-primary">250</span>
+                      <span class="text-primary">دیدگاه</span></a
+                    >
+                  </li>
+                  <li class="d-inline-block h6">
+                    <a href="#">
+                      <span class="text-primary">79</span>
+                      <span class="text-primary">پرسش</span>
+                    </a>
+                  </li>
+                </ul>
+                <div class="product-colors">
+                  <span>رنگ:</span>
+                  <span class="product-color-name"></span>
+                  <ul class="my-3 product-colors-container">
+                    <li
+                      class="d-inline-block active"
+                      data-color="#dc3545"
+                      data-color-name="قرمز"></li>
+                    <li
+                      class="d-inline-block"
+                      data-color="#198754"
+                      data-color-name="سبز"></li>
+                    <li
+                      class="d-inline-block"
+                      data-color="#6f42c1"
+                      data-color-name="بنفش"></li>
+                    <li
+                      class="d-inline-block"
+                      data-color="#d63384"
+                      data-color-name="صورتی"></li>
+                  </ul>
+                </div>
+                <div class="features">
+                  <h2 class="h3 mb-4">ویژگی ها</h2>
+                  <ul class="">
+                    <li>
+                      <span class="feature-property">فناوری صفحه‌نمایش :</span>
+                      <span class="feature-value">Super Retina XDR OLED</span>
+                    </li>
+                    <li>
+                      <span class="feature-property">اندازه :</span>
+                      <span class="feature-value">6.7</span>
+                    </li>
+                    <li>
+                      <span class="feature-property">رزولوشن عکس :</span>
+                      <span class="feature-value">12 مگاپیکسل</span>
+                    </li>
+                    <li>
+                      <span class="feature-property">نسخه سیستم عامل :</span>
+                      <span class="feature-value">iOS 15</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div
+                  class="product-seller bg-secondary-subtle p-4 border rounded-3 my-5 my-lg-0">
+                  <h4 class="user-select-none h3">فروشنده</h4>
+                  <div class="py-4">
+                    <div class="d-flex gap-4 align-items-center mb-3">
+                      <i class="h5 m-0"
+                        ><span class="text-danger">A</span>M<span
+                          class="text-danger"
+                          >A</span
+                        >TIS</i
+                      >
+                      <h2 class="m-0 h3">آماتیس</h2>
+                    </div>
+                    <div class="rating d-flex gap-4 align-items-center mx-5">
+                      <div>
+                        <span class="seller__rate-value text-success h5"
+                          >94%</span
+                        >
+                        <span class="text-muted h5">رضایت مشتریان</span>
+                      </div>
+                      <div>
+                        <span class="text-muted h5">عملکرد</span>
+                        <span class="seller__rate-functionality text-success h5"
+                          >عالی</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="prodouct-garuntee d-flex align-items-center gap-4 h5 border-top border-bottom py-4">
+                    <i class="bi bi-shield-check text-secondary"></i>
+                    <span>گارانتی ۲۰ ماهه ماکان سرویس</span>
+                  </div>
+                  <div class="product-availability py-4 border-bottom">
+                    <ul>
+                      <li class="d-flex align-items-center gap-3">
+                        <i class="bi bi-building-check text-primary"></i>
+                        <span>موجود در انبار آماتیس</span>
+                      </li>
+                      <li class="d-flex align-items-center gap-5">
+                        <span class="dot"></span>
+                        <div class="d-flex align-items-center gap-4">
+                          <i class="bi bi-truck text-danger"></i>
+                          <span class="h6 text-muted"
+                            >ارسال مستقیم از آماتیس</span
+                          >
+                        </div>
+                      </li>
+                      <li class="d-flex align-items-center gap-5">
+                        <span class="dot dot--last"></span>
+                        <div class="d-flex align-items-center gap-4">
+                          <i class="bi bi-airplane text-primary"></i>
+                          <span class="h6 text-muted"
+                            >ارسال فوری (شهر تهران)</span
+                          >
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    class="product-buy d-flex flex-column justify-content-center gap-4 pt-4">
+                    <span class="product-price text-left"
+                      >81,282,000 تومان</span
+                    >
+                    <button class="btn btn-danger h4 py-3">
+                      افزودن به سبد خرید
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <section class="sellers my-5">
+          <h2 class="sellers__title">فروشندگان این محصول</h2>
+          <div class="overflow-x-auto">
+            <div class="seller d-flex">
+              <div class="seller__item">
+                <div class="d-flex align-items-center gap-4">
+                  <i class="bi bi-shop text-success h1"></i>
+                  <h3 class="seller__name text-primary">آماتیس</h3>
+                </div>
+                <div class="rating d-flex gap-4 align-items-center">
+                  <div>
+                    <span class="seller__rate-value text-danger">94%</span>
+                    <span class="text-muted">رضایت مشتریان</span>
+                  </div>
+                  <div>
+                    <span class="text-muted">عملکرد</span>
+                    <span class="seller__rate-functionality text-danger"
+                      >عالی</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="seller__item d-flex align-items-center gap-2">
+                <i class="bi bi-truck h2 text-blue m-0"></i>
+                <span>ارسال از آماتیس</span>
+              </div>
+              <div class="seller__item d-flex align-items-center gap-2">
+                <i class="bi bi-shield-check text-teal h3 m-0"></i>
+                <span>گارانتی 18ماهه</span>
+              </div>
+              <div class="seller__item d-flex align-items-center gap-2">
+                <span>40,000,000</span>
+                <span>تومان</span>
+              </div>
+              <div class="seller__item d-flex align-items-center">
+                <button class="btn btn-pink h4">افزودن به سبد خرید</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <section class="product-info">
+      <div class="container-fluid">
+        <ul
+          class="product-info__tabs d-flex border-bottom border-secondary mb-4">
+          <li>
+            <a href="#product-introduction" class="active">بررسی کالا</a>
+          </li>
+          <li>
+            <a href="#product-details">مشخصات</a>
+          </li>
+          <li>
+            <a href="#users-comments">نظرات کاربران</a>
+          </li>
+          <li>
+            <a href="#q-and-a">پرسش و پاسخ</a>
+          </li>
+        </ul>
+
+        <div
+          data-id="product-introduction"
+          id="product-introduction"
+          class="product-introduction">
+          <p class="product-details__title px-4 position-relative fw-bold">
+            معرفی کالا
+          </p>
+          <h3 class="product-introduction__title fw-bold h4">
+            میان‌رده دوست داشتنی با مشخصات کاربردی
+          </h3>
+          <p class="product-introduction__paragraph text-secondary">
+            تنوع بالای گوشی‌های هوشمند میان‌رده شرکت سامسونگ سبب شده تا پاسخ‌گوی
+            تمام سلیقه‌ها باشد. سامسونگ Galaxy A14 هم یکی از این گوشی‌های
+            میان‌رده است. گوشی که با طراحی ساده و البته جذابش، به سرعت جایش را
+            در دل کاربران باز می‌کند. در نمای رو‌به‌رویی طراحی آشنای ناچ
+            واتردراپ را برای صفحه‌نمایش شاهد هستیم که باید بگوییم که بهتر بود
+            حاشیه کمتری برای قسمت پایینی صفحه‌نمایش در نظر گرفته می‌شد. در مجموع
+            ۸۰.۲ درصد از نمای رو‌به‌رویی را صفحه‌نمایش به خودش اختصاص داده که در
+            نتیجه با صفحه‌نمایشی به نسبت یکدست با حاشیه‌های معمولی رو‌به‌رو
+            هستید.
+          </p>
+          <div class="container">
+            <div class="procuct-introduction-image my-4">
+              <img
+                src="assets/images/products/samsung/samsung-product-page.png"
+                alt="" />
+            </div>
+          </div>
+          <p class="introduction-paragraph text-secondary">
+            در قسمت پشتی اما زبان طراحی جدید سامسونگ را شاهد هستیم. زبان طراحی
+            که در عین سادگی زیبا است. سه سنسور دوربین را شاهد هستیم که با چیدمان
+            ستونی شکل کنار یکدیگر قرار گرفته‌اند و دیگر خبری از معماری مستطیلی
+            با مربعی برای قرار‌گیری سنسور‌های دوربین نیست. وزن ۲۰۱ گرمی این گوشی
+            وزن بسیار سبکی به حساب نمی‌آید، اما در استفاده طولانی مدت خستگی
+            چندانی برای دست ندارد و از طرفی همین وزن نه‌چندان سبک، سبب شده تا در
+            حین استفاده احساس افتادن تا میزان بسیار زیادی کاهش پیدا کند و حس و
+            حال استفاده از یک گوشی رده بالا را به شما بدهد.
+          </p>
+          <h3 class="product-introduction__title fw-bold h4">
+            سامسونگ همیشه در بخش صفحه‌نمایش عملکرد خوبی دارد
+          </h3>
+          <div class="container">
+            <div class="procuct-introduction-image my-4">
+              <img
+                src="assets/images/products/samsung/samsung-product-page-1.png"
+                alt="" />
+            </div>
+          </div>
+          <p class="introduction-paragraph text-secondary">
+            در این بخش سامسونگ همانند همیشه عملکرد بسیار خوبی داشته است. سامسونگ
+            Galaxy A14 به صفحه‌نمایش با ابعاد ۶.۶ اینچ و رزولوشن ۱۰۸۰×۲۴۰۸ پیکسل
+            از نوع PLS مجهز شده است. باید بگوییم که رزولوشن بسیار خوبی برای این
+            صفحه‌نمایش در نظر گرفته شده است. اما توانایی نمایش ۴۰۰ پیکسل در هر
+            اینچ، عملکرد خوب این صفحه‌نمایش را تکمیل کرده است. وضوح تصویر بالا و
+            نمایش دقیق و عمیق رنگ‌ها از جمله خصوصیات بارز صفحه‌نمایش این گوشی
+            هوشمند است. باید بگوییم که در این بازه قیمتی، سامسونگ Galaxy A14 به
+            یکی از بهترین صفحات‌نمایش مجهز شده است.
+          </p>
+        </div>
+
+        <div
+          class="product-details"
+          data-id="product-details"
+          id="product-details">
+          <h2 class="fw-bold mb-5">مشحصات کالا</h2>
+          <div class="row">
+            <p class="product-details__title px-4 position-relative fw-bold">
+              مشخصات کلی
+            </p>
+            <div class="col-12 col-md-3 col-xl-2 p-0 mb-3">
+              <div class="detail-param rounded-3 py-3 px-4">ابعاد</div>
+            </div>
+            <div class="col-12 col-md-9 col-xl-10 p-0 mb-3">
+              <div class="detail-description rounded-3 py-3 px-4">50*70</div>
+            </div>
+            <div class="col-12 col-md-3 col-xl-2 p-0 mb-3">
+              <div class="detail-param rounded-3 py-3 px-4">
+                مشخصات سیم کارت
+              </div>
+            </div>
+            <div class="col-12 col-md-9 col-xl-10 p-0 mb-3">
+              <div class="detail-description rounded-3 py-3 px-4">
+                سایز نانو (8.8 × 12.3 میلی‌متر)
+              </div>
+            </div>
+            <div class="col-12 col-md-3 col-xl-2 p-0 mb-3">
+              <div class="detail-param rounded-3 py-3 px-4">وزن</div>
+            </div>
+            <div class="col-12 col-md-9 col-xl-10 p-0 mb-3">
+              <div class="detail-description rounded-3 py-3 px-4">174گرم</div>
+            </div>
+            <div class="col-12 col-md-3 col-xl-2 p-0 mb-3">
+              <div class="detail-param rounded-3 py-3 px-4">ویژگی های خاص</div>
+            </div>
+            <div class="col-12 col-md-9 col-xl-10 p-0 mb-3">
+              <div class="detail-description rounded-3 py-3 px-4">
+                مقاوم در برابر آب , مناسب عکاسی , مناسب عکاسی سلفی , مناسب بازی
+                , مجهز به حس‌گر تشخیص چهره
+              </div>
+            </div>
+            <p class="product-details__title px-4 position-relative fw-bold">
+              پردازنده
+            </p>
+            <div class="col-12 col-md-3 col-xl-2 p-0 mb-3">
+              <div class="detail-param rounded-3 py-3 px-4">تراشه</div>
+            </div>
+            <div class="col-12 col-md-9 col-xl-10 p-0 mb-3">
+              <div class="detail-description rounded-3 py-3 px-4">
+                Apple A11 Bionic Chipset
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="users-comments" class="users-comments">
+          <h2 class="fw-bold mb-5">نظرات کاربران</h2>
+          <div class="row mb-5">
+            <div class="col-md-6 mb-5">
+              <div class="d-flex align-items-center gap-3">
+                <h4>
+                  <span class="fw-bolder h2">4.1</span>
+                  از 5
+                </h4>
+                <span class="text-secondary-emphasis h6">
+                  از مجموع ۲۶۶ امتیاز</span
+                >
+              </div>
+              <div>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-half text-warning"></i>
+                <i class="bi bi-star text-warning"></i>
+              </div>
+              <div>
+                <ul class="product-rate">
+                  <li>
+                    <span class="product-rate__title">طراحی</span>
+                    <div class="product-rate__range">
+                      <div></div>
+                      <span>عالی</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="product-rate__title">قیمت و ارزش خرید</span>
+                    <div class="product-rate__range">
+                      <div></div>
+                      <span>عالی</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="product-rate__title">کیفیت</span>
+                    <div class="product-rate__range">
+                      <div></div>
+                      <span>عالی</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="product-rate__title">مصرف انرژی</span>
+                    <div class="product-rate__range">
+                      <div></div>
+                      <span>عالی</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="product-rate__title">امکانات و قابلیت ها</span>
+                    <div class="product-rate__range">
+                      <div></div>
+                      <span>عالی</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div>
+                <p class="h2">شما هم میتوانید در مورد این کالا نظر بدهید</p>
+                <p class="text-secondary h4 my-3">
+                  برای ثبت نظر، لازم است ابتدا وارد حساب کاربری خود شوید. اگر
+                  این محصول را قبلا از آماتیس خریده باشید، نظر شما به عنوان مالک
+                  محصول ثبت خواهد شد.
+                </p>
+              </div>
+              <button
+                class="d-flex align-items-center gap-2 rounded-2 bg-purple text-white py-2 px-4">
+                <i class="bi bi-plus m-0 text-white" style="height: 25px"></i>
+                <span>افزودن نظر جدید</span>
+              </button>
+            </div>
+          </div>
+          <div class="comments-container">
+            <div class="comment">
+              <div
+                class="comment-details border-bottom d-flex justify-content-between align-itmes-center">
+                <div>
+                  <span
+                    class="comment__rate rounded text-white py-1 px-3 bg-success"
+                    >5.0</span
+                  >
+                  <span class="fw-bold h3 mx-3">درجه یک</span>
+                  <span class="comment__date text-secondary h5 mx-3"
+                    >15 اردیبهشت 1401</span
+                  >
+                  <span class="text-secondary h5 mx-2">کاربر آماتیس</span>
+                  <span class="text-secondary h5 mx-2">خریدار</span>
+                </div>
+                <div>
+                  <i class="bi bi-three-dots-vertical text-secondary h2"></i>
+                </div>
+              </div>
+
+              <div class="comment__user-recommand mt-3">
+                <span class="text-success h5">
+                  <i class="bi bi-hand-thumbs-up text-success h3"></i>
+                  پیشنهاد می کنم
+                </span>
+                <span class="text-danger h5">
+                  <i class="bi bi-hand-thumbs-down text-danger h3"></i>
+                  پیشنهاد نمی کنم
+                </span>
+              </div>
+
+              <div class="strength-and-weakness d-flex gap-5 my-3">
+                <ul class="positive-points">
+                  <header class="text-primary">نقات قوت</header>
+                  <li>دوربین فوق العاده</li>
+                  <li>باتری با ظرفیت بالا</li>
+                  <li>حسگر اثر انگشت قوی</li>
+                  <li>سرعت بالا</li>
+                </ul>
+                <ul class="negative-points">
+                  <header class="text-danger">نقاط ضعف</header>
+                  <li>تک سیم کارت بودن</li>
+                  <li>پایین بودن رم</li>
+                  <li>رزولوشن پایین</li>
+                </ul>
+              </div>
+
+              <p class="comment__caption border-bottom pb-3">
+                گوشی بسیار زیبا و خوش دستی هست از نظر سخت افزار هم بسیار عالی
+                هستش هفته گذشته هم به اندروید 13 آپدیت شد که بسیار تجربه خوبی
+                برای کاربر رقم میزنه.بشدت پیشنهاد میکنم تنها ایرادی که میشه بهش
+                گرفت این هست که لوازم جانبی مثل گلس و کاور گوشی کم هست براش مثل
+                گوشی های اپل و شیائومی و سامسونگ که انتخاب های زیادی جلوتون هست
+                نیست
+              </p>
+
+              <div class="shipping-description d-flex align-items-center gap-5">
+                <div class="shipping-description__seller">
+                  <i class="bi bi-shop-window text-success"></i>
+                  <span>آماتیس</span>
+                </div>
+                <div
+                  class="shipping-description__color d-flex align-items-center gap-3">
+                  <div data-shipping-color="آبی"></div>
+                  <span class="m-0">آبی</span>
+                </div>
+              </div>
+
+              <div class="comment__survey d-flex justify-content-end">
+                <div class="d-flex">
+                  <span class="mx-4 text-muted h4"
+                    >آیا این دیدگاه برایتان مفید بود؟</span
+                  >
+                  <div class="d-flex align-items-center gap-3">
+                    <button class="text-muted h5">
+                      10
+                      <i class="bi bi-hand-thumbs-up h4"></i>
+                    </button>
+                    <button class="text-muted h5">
+                      5
+                      <i class="bi bi-hand-thumbs-down h4"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="q-and-a" id="q-and-a">
+          <h2 class="fw-bold mb-5">پرسش و پاسخ</h2>
+          <div class="row">
+            <div class="col-2">
+              <div class="add-new-question-container">
+                <p class="text-muted h5 mb-4">
+                  شما هم درباره این کالا پرسش کنید
+                </p>
+                <button
+                  class="py-3 border border-danger rounded-3 w-100 btn-reset text-danger h4">
+                  ثبت پرسش
+                </button>
+              </div>
+            </div>
+            <div class="col-10">
+              <div class="q-and-a-container">
+                <div class="q-and-a">
+                  <div class="question border-bottom py-5">
+                    <div class="question__title d-flex align-items-baseline">
+                      <i class="bi bi-question-circle text-primary h2"></i>
+                      <p class="mx-4 border-bottom pb-4 w-100">
+                        باسلام ازلحاظ دوربین و کیفیت این بهتره یاs21 ویتنام؟
+                        ممنون میشم جواب بدهید
+                      </p>
+                    </div>
+                    <button class="btn-reset mx-5 h5">
+                      <span class="text-primary">ثبت پاسخ</span>
+                      <i
+                        class="bi bi-chevron-left h5 text-primary mx-3 fw-bold"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="q-and-a">
+                  <div class="question border-bottom py-5">
+                    <div class="question__title d-flex align-items-baseline">
+                      <i class="bi bi-question-circle text-primary h2"></i>
+                      <p class="mx-4 pb-4 w-100">
+                        باسلام ازلحاظ دوربین و کیفیت این بهتره یاs21 ویتنام؟
+                        ممنون میشم جواب بدهید
+                      </p>
+                    </div>
+                    <div class="answer">
+                      <div class="d-flex align-items-baseline mb-5">
+                        <span class="h5">پاسخ:</span>
+                        <div class="answer__title mx-3">
+                          <p class="h5">
+                            سلام دوست عزیز. بله. دوربین ماکرو ۲ مگاپیکسلی داره
+                            ولی با نداشتن فرقی نمیکنه.
+                          </p>
+                          <span class="answer__writer h6 text-muted"
+                            >مهدی کفشگر</span
+                          >
+                        </div>
+                      </div>
+                      <div class="answer__survey d-flex justify-content-end">
+                        <div class="d-flex">
+                          <span class="mx-4 text-muted h4"
+                            >آیا این پاسخ برایتان مفید بود؟</span
+                          >
+                          <div class="d-flex align-items-center gap-3">
+                            <button class="text-muted h5">
+                              9
+                              <i class="bi bi-hand-thumbs-up h4"></i>
+                            </button>
+                            <button class="text-muted h5">
+                              2
+                              <i class="bi bi-hand-thumbs-down h4"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn-reset mx-5 h5">
+                      <span class="text-primary">ثبت پاسخ جدید</span>
+                      <i
+                        class="bi bi-chevron-left h5 text-primary mx-3 fw-bold"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="d-flex justify-content-center align-items-center gap-1">
+        <button class="btn-reset">
+          <a href="#">
+            <i class="bi bi-arrow-up"></i>
+            بازگشت به بالا
+          </a>
+        </button>
+      </div>
+
+      <div class="row footer-services my-5">
+        <div class="col text-center mb-4">
+          <div class="service-item">
+            <img src="assets/images/svg/delivery.svg" alt="" />
+            <h3 class="h5">تحویل اکسپرس</h3>
+          </div>
+        </div>
+        <div class="col text-center mb-4">
+          <div class="service-item">
+            <img src="assets/images/svg/payment-terms.svg" alt="" />
+            <h3 class="h5">پرداخت درب منزل</h3>
+          </div>
+        </div>
+        <div class="col text-center mb-4">
+          <div class="service-item">
+            <img src="assets/images/svg/contact-us.svg" alt="" />
+            <h3 class="h5">پشتیبانی 24 ساعته</h3>
+          </div>
+        </div>
+        <div class="col text-center mb-4">
+          <div class="service-item">
+            <img src="assets/images/svg/origin-guarantee.svg" alt="" />
+            <h3 class="h5">ضمانت اصل بودن کالا</h3>
+          </div>
+        </div>
+        <div class="col text-center mb-4">
+          <div class="service-item">
+            <img src="assets/images/svg/return-policy.svg" alt="" />
+            <h3 class="h5">7 روز ضمانت بازگشت</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 col-lg-3">
+            <div>
+              <ul class="footer-menu">
+                <header>راهنمای خرید از آماتیس</header>
+                <li><a href="">نحوه ثبت سفارش</a></li>
+                <li><a href="">رویه ارسال سفارش</a></li>
+                <li><a href="">شیوه های پرداخت</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div>
+              <ul class="footer-menu">
+                <header>خدمات مشتریان</header>
+                <li><a href="">پاسخ به پرسش های متداول</a></li>
+                <li><a href="">رویه های بازگرداندن کالا</a></li>
+                <li><a href="">شرایط استفاده </a></li>
+                <li><a href="">حریم خصوصی</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-2">
+            <div>
+              <ul class="footer-menu">
+                <header>با آماتیس</header>
+                <li><a href="">فزوش در آماتیس</a></li>
+                <li><a href="">همکاری با سازمان‌ها</a></li>
+                <li><a href="">فرصت‌های شغلی</a></li>
+                <li><a href="">تماس با آماتیس</a></li>
+                <li><a href="">درباره آماتیس</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div>
+              <h3 class="h4">از تخفیفات فروشگاه باخبر شوید</h3>
+              <form action="" class="newsletter-form mt-4">
+                <input
+                  type="text"
+                  name=""
+                  id="newsletter-input"
+                  placeholder="ادرس ایمیل خود را وارد کنید" />
+                <button type="submit">ارسال</button>
+              </form>
+              <p
+                id="newsletter__email-messege"
+                class="newsletter__email-messege h5 mb-3 mt-2 text-danger"></p>
+              <h5>ما را در شبکه های اجتماعی دنبال کنید.</h5>
+              <div class="d-flex justify-content-center gap-4 my-4">
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-telegram"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p>هفت روز هفته ، 24 ساعت شبانه‌روز پاسخگوی شما هستیم.</p>
+        <div class="row my-5">
+          <div class="col-12 col-lg-8">
+            <h3>فروشگاه اینترنتی آماتیس، بررسی، انتخاب و خرید آنلاین</h3>
+            <p>
+              آماتیس به عنوان یکی از قدیمی‌ترین فروشگاه های اینترنتی با بیش از
+              یک دهه تجربه، با پایبندی به سه اصل کلیدی، پرداخت در محل، 7 روز
+              ضمانت بازگشت کالا و تضمین اصل‌بودن کالا، موفق شده تا همگام با
+              فروشگاه‌های معتبر جهان، به بزرگ‌ترین فروشگاه اینترنتی ایران تبدیل
+              شود. به محض ورود به تاپ کالا با یک سایت پر از کالا رو به رو
+              می‌شوید! هر آنچه که نیاز دارید و به ذهن شما خطور می‌کند در اینجا
+              پیدا خواهید کرد.
+            </p>
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="row justify-content-center">
+              <div class="col-6" style="width: 14.5rem">
+                <img src="assets/images/symbol-01.png" alt="" />
+              </div>
+              <div class="col-6" style="width: 14.5rem">
+                <img src="assets/images/symbol-02.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="text-center">
+          این سایت فقط یک سایت نمایشی به عنوان نمونه کار می باشد
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

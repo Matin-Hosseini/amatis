@@ -1,0 +1,21 @@
+#register-form {
+  max-width: 40rem;
+  margin: auto; }
+  #register-form input {
+    font-size: 1.4rem; }
+  #register-form label {
+    cursor: text; }
+  #register-form button,
+  #register-form input {
+    border: none;
+    outline: none;
+    width: 100%; }
+  #register-form .messege {
+    height: 1.5rem;
+    visibility: hidden; }
+  #register-form .error {
+    color: #b12020;
+    visibility: visible; }
+
+[type=email] {
+  direction: rtl; }
