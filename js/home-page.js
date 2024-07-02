@@ -4,9 +4,9 @@ import {
   bestSellersProducts,
 } from "./dataBase.js";
 
-$(document).ready(function () {
-  $("body").persiaNumber();
-});
+// $(document).ready(function () {
+//   $("body").persiaNumber();
+// });
 
 const recommandedProductsContainer = document.querySelector(
   "#recommanded-products"
